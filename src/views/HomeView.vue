@@ -1,6 +1,6 @@
+<script setup lang="ts">
+import AppLayout from '@/components/layout/AppLayout.vue'
+</script>
 <template>
-  <h1>Home</h1>
-  <el-button type="success">Success</el-button>
-  <el-icon><IEpHouse /></el-icon>
-  <el-icon><IEpOdometer /></el-icon>
+  <AppLayout />
 </template>
