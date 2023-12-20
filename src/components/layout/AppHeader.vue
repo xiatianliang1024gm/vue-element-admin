@@ -11,10 +11,9 @@ import { isCollapse } from '@/stores/layout/isCollapse'
 
     <!-- 面包屑导航 -->
     <el-breadcrumb separator="/">
-      <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-      <el-breadcrumb-item><a href="/">promotion management</a></el-breadcrumb-item>
-      <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-      <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
+      <el-breadcrumb-item v-for="(item, index) in $route.matched" :key="index">{{
+        item.meta.title
+      }}</el-breadcrumb-item>
     </el-breadcrumb>
 
     <!-- 下拉框 -->
