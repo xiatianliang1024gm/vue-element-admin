@@ -9,6 +9,13 @@ const router = createRouter({
       component: () => import('../views/IndexView.vue'),
       children: [
         {
+          // 如果不在/的children中，布局就丢失了，只有notfound页面
+          path: '/:pathMatch(.*)*',
+          name: 'NotFound',
+          meta: { title: 'NotFound' },
+          component: () => import('../views/NotFound.vue')
+        },
+        {
           path: '',
           name: 'home',
           component: () => import('../views/HomeView.vue'),

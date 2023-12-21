@@ -11,7 +11,7 @@ const activeIndex = computed(() => {
 
 <template>
   <el-aside>
-    <!-- 1. router: 开启菜单路由 点击后路由到el-menu-item index地址 unique-opened:保证最多只有一个菜单是打开状态  default-active: 选中的子菜单 不能是sub-menu -->
+    <!-- 1. router: 开启菜单路由 点击后路由到el-menu-item index地址; unique-opened:保证最多只有一个菜单是打开状态; default-active: 选中的子菜单el-menu-item 不能是sub-menu -->
     <el-menu router unique-opened :collapse="isCollapse" :default-active="activeIndex">
       <a class="logo" href="/">
         <img src="@/assets/favicon.ico" fit="cover" />
@@ -37,8 +37,8 @@ const activeIndex = computed(() => {
           <el-icon><IEpLocation /></el-icon>
           <span>菜单栏2</span>
         </template>
-        <el-menu-item index="/2/1">子菜单1</el-menu-item>
-        <el-menu-item index="/2/2">子菜单2</el-menu-item>
+        <el-menu-item>子菜单1</el-menu-item>
+        <el-menu-item>子菜单2</el-menu-item>
       </el-sub-menu>
     </el-menu>
   </el-aside>
@@ -53,10 +53,7 @@ const activeIndex = computed(() => {
   display: flex;
 }
 .el-menu {
-  /* --active-text-color: #ffd04b; */
-  /* background-color: #545c64; */
   background-color: #dedfe0;
-  /* --text-color: #fff; */
 
   /* 3. 菜单栏右侧1px的边界去掉 */
   border-right: none;

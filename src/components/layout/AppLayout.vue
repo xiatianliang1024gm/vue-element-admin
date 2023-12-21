@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppAside from '@/components/layout/AppAside.vue'
+import AppHeader from '@/components/layout/AppHeader.vue'
 </script>
 <template>
   <div>
@@ -8,6 +9,7 @@ import AppAside from '@/components/layout/AppAside.vue'
       <el-container class="header-and-main">
         <AppHeader />
         <el-main>
+          <!-- 打洞slot 避免页面太大撑爆了，加滚动条 -->
           <el-scrollbar>
             <RouterView />
           </el-scrollbar>
